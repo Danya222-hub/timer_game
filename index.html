@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="head">
+        <h1 class="head_big">Guess the number</h1>
+        <p class="head_small">I’ve picked a number between <span class="head_small_1">1</span> and <span class="head_small_100">100</span>. Try to guess it!</p>
+        <h2 id="timer" class="head_timer"></h2>
+    </div>
+    <div class="question_big">
+        <div class="question">
+            <img class="question_img" src="img/question.svg" alt="">
+        </div>
+        <p class="question_txt">Boiling! You're right there!</p>
+    </div>
+    <div class="input">
+    <input id="number" type="number" placeholder="Enter a number....">
+    <p class="hint">Press Enter to submit your guess</p>
+    </div>  
+    <ul id="attempts"></ul>
+    <script src="script.js"></script>
+    <script src="timer.js"></script>
+</body>
+</html>
