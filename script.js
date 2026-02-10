@@ -1,6 +1,10 @@
 const attemptTemplate = document.getElementById("attempt")
 const input = document.getElementById("number")
 const ul = document.getElementById("attempts")
+const hint = document.getElementById(`hint`)
+const question = document.getElementById(`question`)
+const questionImg = document.getElementById(`question_img`)
+const btnRetry = document.getElementById(`btnRetry`)
 const rand = Math.floor(Math.random() * (100 - 1 + 1)) + 1;
 const lastAttempts = []
 
@@ -37,3 +41,6 @@ input.addEventListener("keypress", function (event) {
 })
 
 console.log(rand)
+btnRetry.onclick = function() {
+    window.location.reload()
+}

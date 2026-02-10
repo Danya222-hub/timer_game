@@ -225,3 +225,15 @@ body {
 .status.frosen {
   color: rgba(87, 142, 249, 1);
 }
+.btnRetry {
+  background-color: #FF5C58;
+  border-radius: 16px;
+  font-size: 16px;
+  font-family: Inter;
+  color: white;
+  padding: 16px;
+  width: 400px;
+  border: none;
+  display: none;
+  cursor: pointer;
+}
