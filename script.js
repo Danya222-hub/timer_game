@@ -1,3 +1,4 @@
+const attemptTemplate = document.getElementById("attempt")
 const input = document.getElementById("number")
 const ul = document.getElementById("attempts")
 const rand = Math.floor(Math.random() * (100 - 1 + 1)) + 1;
@@ -23,20 +24,16 @@ function getStatus() {
   }
 }
 input.addEventListener("keypress", function (event) {
-  if (event.key === "Enter") {
-    lastAttempts.push(
-      { attempt: input.value, status: getStatus() }
-    )
-    render()
+  if (event.key === "Enter" && input.value != "") {
+    const li = attemptTemplate.content.cloneNode(true);
+    const attemptNumber = li.getElementById("attempt_number")
+    attemptNumber.innerText = input.value
+    
+    const attemptStatus = li.getElementById("attempt_status")
+    attemptStatus.classList.add(getStatus())
+    attemptStatus.innerText = getStatus()
+    ul.append(li);
   }
 })
+
 console.log(rand)
-function render(params) {
-  ul.innerHTML = ""
-  for (const  item of lastAttempts ) {
-    const li = document.createElement("li")
-    li.innerText = item.attempt + item.status
-    ul.append(li)
-  console.log(item)  
-  }
-}

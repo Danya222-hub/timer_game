@@ -104,6 +104,8 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 16px;
+  position: relative;
+  
 }
 
 .question {
@@ -118,20 +120,21 @@ body {
   justify-content: center;
   align-items: center;
 }
+
 .question_img {
-width: 96.16px;
-height: 140px;
+  width: 96.16px;
+  height: 140px;
 }
 
 .question_txt {
   color: rgba(255, 92, 88, 1);
 
-font-family: Chakra Petch;
-font-size: 24px;
-font-weight: 700;
-line-height: 31px;
-letter-spacing: 0px;
-text-align: left;
+  font-family: Chakra Petch;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 31px;
+  letter-spacing: 0px;
+  text-align: left;
 }
 
 .head_small_1 {
@@ -140,4 +143,85 @@ text-align: left;
 
 .head_small_100 {
   color: rgba(241, 241, 241, 1);
+}
+
+.last_attemps {
+  color: rgba(241, 241, 241, 0.8);
+  font-family: Chakra Petch;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 23px;
+  order: 1;
+}
+
+#attempts {
+  display: flex;
+  flex-direction: column-reverse;
+ left: -250px;
+  list-style: none;
+  position: absolute;
+ 
+}
+
+
+.attempt {
+  color: rgba(241, 241, 241, 1);
+  font-family: Chakra Petch;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 62px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  animation: mymove 0.5s forwards;
+}
+#attempts .attempt:first-of-type {
+  background-color: red;
+}
+
+#attempts .attempt:last-of-type {
+  border: 2px solid rgba(241, 241, 241, 0.3);
+  border-radius: 12px;
+  padding: 8px 12px;
+  background: rgba(241, 241, 241, 0.05);
+}
+
+@keyframes mymove {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+    scale: 0.7;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+    scale: 1;
+  }
+}
+
+.status {
+  color: rgba(195, 73, 70, 1);
+
+  font-family: Chakra Petch;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 23px;
+
+}
+
+.status.warm {
+  color: rgba(152, 60, 58, 1);
+}
+
+.status.cool {
+  color: rgba(59, 88, 147, 1);
+}
+
+.status.cold {
+  color: rgba(72, 114, 195, 1);
+}
+
+.status.frosen {
+  color: rgba(87, 142, 249, 1);
 }
