@@ -105,7 +105,7 @@ body {
   align-items: center;
   gap: 16px;
   position: relative;
-  
+
 }
 
 .question {
@@ -157,10 +157,10 @@ body {
 #attempts {
   display: flex;
   flex-direction: column-reverse;
- left: -250px;
+  left: -250px;
   list-style: none;
   position: absolute;
- 
+
 }
 
 
@@ -175,6 +175,7 @@ body {
   gap: 8px;
   animation: mymove 0.5s forwards;
 }
+
 #attempts .attempt:first-of-type {
   background-color: red;
 }
@@ -225,6 +226,7 @@ body {
 .status.frosen {
   color: rgba(87, 142, 249, 1);
 }
+
 .btnRetry {
   background-color: #FF5C58;
   border-radius: 16px;
@@ -236,4 +238,23 @@ body {
   border: none;
   display: none;
   cursor: pointer;
+}
+.Question_animation {
+  animation: btnRetry 1.5s;
+}
+.bntRetry_tgl {
+  animation: btnRetry 1.5s;
+  
+}
+
+@keyframes btnRetry {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+    scale: 0.7;
+  } 100% {
+    opacity: 1;
+    transform: translateX(0);
+    scale: 1;
+  }
 }

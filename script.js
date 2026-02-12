@@ -7,11 +7,14 @@ const questionImg = document.getElementById(`question_img`)
 const btnRetry = document.getElementById(`btnRetry`)
 const rand = Math.floor(Math.random() * (100 - 1 + 1)) + 1;
 const lastAttempts = []
+const question_big = document.getElementById(`question_big`)
 
 function getStatus() {
   const diff = Math.abs(rand - input.value);
   console.log(diff);
   if (diff == 0) {
+    win()
+    
     return "correct"
   } else if (diff <= 3) {
     return "boiling"
@@ -43,4 +46,16 @@ input.addEventListener("keypress", function (event) {
 console.log(rand)
 btnRetry.onclick = function() {
     window.location.reload()
+}
+function win() {
+    clearInterval(interval)
+    input.style.display = `none`
+    hint.style.display = `none`
+    ul.style.display = `none`
+    question.style.display = `none`
+    timer.style.display = `none`
+    questionImg.src = `img/cup.svg`
+    btnRetry.style.display = `block`
+    btnRetry.classList.add(`bntRetry_tgl`)
+    question_big.classList.add(`bntRetry_tgl`)
 }

@@ -1,6 +1,6 @@
 const timer = document.getElementById("timer");
-let min = 0;
-let sec = 5;
+let min = 1;
+let sec = 1;
 // function tick() {
 //     sec--
 //     if (sec == 0) {
@@ -33,8 +33,10 @@ function stop() {
     timer.style.display = `none`
     questionImg.src = `img/sad.svg`
     btnRetry.style.display = `block`
-
+    btnRetry.classList.add(`bntRetry_tgl`)
+    question_big.classList.add(`bntRetry_tgl`)
 }
+
 function render() {
     let s = sec;
     let m = min;
